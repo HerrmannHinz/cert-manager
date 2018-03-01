@@ -72,6 +72,23 @@ The following tables lists the configurable parameters of the cert-manager chart
 | `ingressShim.image.tag` | Image tag for ingress-shim. Defaults to `image.tag` if empty | `` |
 | `ingressShim.image.pullPolicy` | Image pull policy for ingress-shim | `IfNotPresent` |
 
+## ExtraArgs
+
+Certain extra arguments can be passed to the `ingressShim` and/or the `certManager` itself. 
+See the below table for possible arguments. 
+
+ingressShim: 
+
+| Parameter | Description | Default |
+| --------- | ----------- | ------- |
+| `v` | Verbosity level (0-9| `1` |
+| `image.tag` | Image tag | `v0.2.3` |
+| `image.pullPolicy` | Image pull policy | `IfNotPresent` |
+
+
+
+## More 
+
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
